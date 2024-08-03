@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://didof70hvggsg"]
+
+[ext_resource type="Texture2D" uid="uid://dnepf086x5uhk" path="res://rect.png" id="1_qxbfp"]
+[ext_resource type="Script" path="res://static_body_2d.gd" id="2_twy4x"]
+
+[node name="Wall" type="Node2D"]
+metadata/_edit_group_ = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource("2_twy4x")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("1_qxbfp")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(186.5, -32, -4.89999, -32, -2.5, -24, -2.5, -21, 176.5, -21, 176.5, 22, -175.5, 22, -175.5, -21, -11.7, -21, -7.5, -25.2, -7.5, -27.5, -9.5, -31.5, -186.5, -32, -186.5, 32, 186.5, 32)
